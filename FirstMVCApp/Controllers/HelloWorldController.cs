@@ -10,7 +10,13 @@ namespace FirstMVCApp.Controllers
         {
             DogViewModel doggo = new DogViewModel()
             { Name= "Hatsu", Age=3};
+       
             return View(doggo);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
         }
 
         public string Hello()

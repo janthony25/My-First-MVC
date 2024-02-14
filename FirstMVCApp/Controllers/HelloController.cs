@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FirstMVCApp.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FirstMVCApp.Controllers
 {
@@ -6,7 +7,9 @@ namespace FirstMVCApp.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            CatViewModel catt = new CatViewModel()
+            { CatName = "Moe", CatAge = 8 };
+            return View(catt);
         }
     }
 }
