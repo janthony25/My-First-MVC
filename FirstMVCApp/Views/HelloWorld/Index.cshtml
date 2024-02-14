@@ -1,4 +1,4 @@
-﻿@model FirstMVCApp.Models.DogViewModel
+﻿@model List<FirstMVCApp.Models.DogViewModel>
 
 
 @*
@@ -6,7 +6,10 @@
 *@
 @{
 }
-<h1>Hello World Bro!</h1>
-<p>This is the index page of the HelloWorld Controller</p>
+<ul>
+    @foreach (var dog in Model)
+    {
+        <li>@dog.Name (@dog.Age)</li>
+    }
 
-<h4>My sister named @Model.Name is already @Model.Age years old</h4>
+</ul>
