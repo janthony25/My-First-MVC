@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FirstMVCApp.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FirstMVCApp.Controllers
 {
@@ -7,7 +8,9 @@ namespace FirstMVCApp.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            DogViewModel doggo = new DogViewModel()
+            { Name= "Hatsu", Age=3};
+            return View(doggo);
         }
 
         public string Hello()
